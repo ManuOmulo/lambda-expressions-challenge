@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
 public class Main {
@@ -36,7 +37,9 @@ public class Main {
     };
     System.out.println(everySecondCharacter(everySecondChar, "1234567890"));
 
-
+    Supplier<String> iLoveJava = () -> "I love Java";
+    String supplierResult = iLoveJava.get();
+    System.out.println(supplierResult);
   }
 
   public static String everySecondCharacter(UnaryOperator<String> function, String input) {
